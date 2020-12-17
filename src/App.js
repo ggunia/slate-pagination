@@ -39,7 +39,11 @@ export default function App() {
       }
 
       return (
-        <p style={{ position: "relative", margin: 0 }} {...attributes}>
+        <p
+          data-node-id={element.id}
+          style={{ position: "relative", margin: 0 }}
+          {...attributes}
+        >
           {children}
         </p>
       );
