@@ -17,9 +17,9 @@ const initialState = [
         type: "paragraph",
         id: shortid.generate(),
         children: [{ text: "Some content here !!" }]
-      }
+      },
     ]
-  }
+  },
 ];
 
 export default function App() {
