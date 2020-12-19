@@ -1,2 +1,1 @@
-# slate-pagination
-Created with CodeSandbox
+# slate paging plugin
