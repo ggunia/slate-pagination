@@ -1,0 +1,31 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "playground for slate-paging",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "slate": "^0.59.0",
+    "slate-react": "^0.59.0",
+    "slate-paged": "1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "html-loader": "^1.3.2",
+    "html-webpack-plugin": "^4.5.0",
+    "url-loader": "^4.1.1",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

@@ -22,32 +22,11 @@ const initialState = [
   },
 ];
 
-const rowMeasurer = (node) => {
-  if (node.type === 'paragraph') {
-    const text = node
-      .children
-      .map(curr => curr.text)
-      .reduce((acc, curr) => acc + curr, '')
-
-    const span = document.createElement('span')
-    span.setAttribute('style', 'width: 470px; display: block; word-break: break-all;')
-    span.innerHTML = text
-    document.body.appendChild(span)
-
-    const height = span.clientHeight
-    document.body.removeChild(span)
-
-    return Math.max(height, 18)
-  }
-
-  return 16
-}
-
 export default function App() {
   const [editorState, updateEditorState] = React.useState(initialState);
 
   const editor = React.useMemo(
-    () => withHistory(withPagination(rowMeasurer)(withNodeId(withReact(createEditor())))),
+    () => withHistory(withPagination(withNodeId(withReact(createEditor())))),
     []
   );
 
@@ -77,11 +56,7 @@ export default function App() {
   };
 
   return (
-    <div
-      data-start="selection"
-      className="mda"
-      style={{ padding: 50, border: "1px solid black" }}
-    >
+    <div style={{ padding: 50, border: "1px solid black" }}>
       <Slate
         editor={editor}
         value={editorState}

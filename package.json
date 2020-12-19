@@ -1,32 +1,35 @@
 {
-  "name": "slate-editor",
-  "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "main": "src/index.js",
-  "dependencies": {
-    "@simonwep/selection-js": "1.7.1",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-scripts": "3.4.3",
-    "shortid": "2.2.16",
-    "slate": "0.59.0",
-    "slate-history": "0.59.0",
-    "slate-react": "0.59.0"
-  },
-  "devDependencies": {
-    "typescript": "3.8.3"
-  },
+  "name": "slate-paged",
+  "version": "0.1.0",
+  "description": "paging plugin for slate",
+  "keywords": [
+    "slate",
+    "react-slate",
+    "paging",
+    "slate-paging"
+  ],
+  "main": "dist/index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "webpack --config webpack.config.js --watch"
+  },
+  "dependencies": {
+    "shortid": "2.2.16"
+  },
+  "peerDependencies": {
+    "slate": "0.59.0"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "slate": "^0.59.0",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.2.0"
+  }
 }
