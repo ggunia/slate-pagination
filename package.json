@@ -1,5 +1,9 @@
 {
   "name": "slate-paged",
+  "author": {
+    "email": "guramgunia@gmail.com",
+    "name": "Guram"
+  },
   "version": "0.1.0",
   "description": "paging plugin for slate",
   "keywords": [
