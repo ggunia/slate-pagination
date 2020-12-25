@@ -4,10 +4,22 @@ import { createEditor } from "slate";
 
 import withPagination from "../../lib/withPaging";
 import Page from "./Page";
+import shortid from "shortid";
 
 const initialState = [
   {
     type: "page",
+    id: shortid.generate(),
+    children: [
+      {
+        type: "paragraph",
+        children: [{ text: "Some" }]
+      },
+    ]
+  },
+  {
+    type: "page",
+    id: shortid.generate(),
     children: [
       {
         type: "paragraph",
@@ -21,7 +33,7 @@ export default function App() {
   const [editorState, updateEditorState] = React.useState(initialState);
 
   const editor = React.useMemo(
-    () => withPagination(withReact(createEditor())),
+    () => withPagination({ pageHeight: 54, pageWidth: 470 })(withReact(createEditor())),
     []
   );
 

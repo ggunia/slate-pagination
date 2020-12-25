@@ -12,7 +12,12 @@ const styles = {
 
 const Page = React.forwardRef(({ attributes, id, content }, ref) => {
   return (
-    <div ref={ref} style={styles.root} data-page-id={id} {...attributes}>
+    <div
+      ref={ref}
+      style={styles.root}
+      data-page-id={id}
+      {...attributes}
+    >
       {content}
     </div>
   );
