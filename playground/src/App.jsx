@@ -33,7 +33,7 @@ export default function App() {
   const [editorState, updateEditorState] = React.useState(initialState);
 
   const editor = React.useMemo(
-    () => withPagination({ pageHeight: 54, pageWidth: 470 })(withReact(createEditor())),
+    () => withPagination({})(withReact(createEditor())),
     []
   );
 
