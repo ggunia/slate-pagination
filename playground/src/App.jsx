@@ -137,6 +137,25 @@ export default function App() {
   )
 
   const onEditorChange = (value) => {
+    if (editor.selection) {
+      console.log(editor.selection)
+      const { focus: { path } } = editor.selection
+      const node = editor
+        .children[path[0]]
+        .children[path[1]]
+
+      if (node.type === 'component') {
+        // get component content (which is inside node)
+        // send updates to connected users
+        // [line] -> [xPage, xComponentLine, [[line]] ]
+
+        console.log('change inside a component !!')
+      }
+
+
+    }
+
+    // Do document level collaboration
     updateEditorState(value)
   }
 
