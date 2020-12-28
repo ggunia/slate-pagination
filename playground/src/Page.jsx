@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react'
 
 const styles = {
   root: {
-    border: "1px solid black",
+    border: '1px solid black',
     padding: 5,
     height: 54,
-    overflow: "hidden",
-    position: "relative"
+    overflow: 'hidden',
+    position: 'relative'
   }
-};
+}
 
-const Page = React.forwardRef(({ attributes, id, content }, ref) => {
+const Page = React.forwardRef(({ attributes, id, content }, ref) => { // eslint-disable-line
   return (
     <div
       ref={ref}
@@ -20,7 +20,9 @@ const Page = React.forwardRef(({ attributes, id, content }, ref) => {
     >
       {content}
     </div>
-  );
-});
+  )
+})
 
-export default Page;
+Page.displayName = 'Page'
+
+export default Page

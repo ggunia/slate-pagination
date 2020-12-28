@@ -9,11 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@simonwep/selection-js": "^1.7.1",
+    "immutable": "^4.0.0-rc.12",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "slate": "^0.59.0",
     "slate-paged": "1.0.0",
-    "slate-react": "^0.59.0"
+    "slate-react": "^0.59.0",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
