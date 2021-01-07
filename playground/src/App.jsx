@@ -101,6 +101,8 @@ export default function App() {
     })
   }
 
+  // component did catch and history push previous editor state
+
   const renderElement = React.useCallback(
     ({ element, children, attributes }) => {
       if (element.type === 'page') {
