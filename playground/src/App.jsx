@@ -181,6 +181,8 @@ export default function App() {
     })
   }
 
+  // component did catch and history push previous editor state
+
   const renderElement = React.useCallback(
     ({ element, children, attributes }) => {
       if (element.type === 'page') {
@@ -267,7 +269,6 @@ export default function App() {
 
   const onEditorChangee = (value) => {
     if (editor.selection) {
-      console.log(editor.selection)
       const { focus: { path } } = editor.selection
       const node = editor
         .children[path[0]]
@@ -277,8 +278,6 @@ export default function App() {
         // get component content (which is inside node)
         // send updates to connected users
         // [line] -> [xPage, xComponentLine, [[line]] ]
-
-        console.log('change inside a component !!')
       }
 
 
