@@ -10,9 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "@simonwep/selection-js": "^1.7.1",
+    "axios": "^0.21.1",
     "immutable": "^4.0.0-rc.12",
+    "json0-ot-diff": "^1.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "sharedb": "^1.5.2",
     "slate": "^0.59.0",
     "slate-paged": "1.0.0",
     "slate-react": "^0.59.0",
